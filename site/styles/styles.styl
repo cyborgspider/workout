@@ -1,16 +1,71 @@
+@font-face
+  font-family 'exerglyph'
+  font-style  normal
+  font-weight normal
+  src         url("../fonts/exerglyphs.woff") format("woff")
+
 body
   background white
   color      black
-  font 16px/1.5 'Helvetica', 'Arial', sans-serif
+  font       16px/1.5 'Helvetica', 'Arial', sans-serif
+  margin     0
+  padding    0 12px
 
-.ex
-  clear both
-  padding 40px 0
-  border-bottom solid 1px #ccc
-  &.active
-    background #ddd
+h1
+  font 32px 'Georgia',serif
+  text-align center
 
-.time
-  text-align right
-  font-size 108px
+.ex-list
+  list-style none
+  margin     0
+  padding    0
+  overflow   hidden
 
+.ex-item
+  box-sizing    border-box
+  width         30%
+  padding       12px
+  float         left
+  border-radius 4px
+  border        solid 1px #ccc
+  text-align    center
+  margin-right  12px
+  margin-bottom 12px
+  &:nth-child(3n)
+    margin-right 0
+
+
+.ex-text
+  margin 0
+  height 48px
+
+assignGlyph(iconName, alias)
+  .icon
+    &.{iconName}
+      &:before
+        content alias
+
+.icon
+  font-size       64px
+  display         inline-block
+  font-family     'exerglyph'
+  font-style      normal
+  text-decoration none
+  font-smoothing  antialiased
+  user-select     none
+  vertical-align  middle
+
+assignGlyph('bridge', 'E')
+assignGlyph('ball-pike','A')
+assignGlyph('bike-crunch','C')
+assignGlyph('ball-leg-raise','B')
+assignGlyph('ball-bridge','D')
+assignGlyph('side-bridge','F')
+assignGlyph('static-arm-curl','G')
+assignGlyph('skullcrusher','I')
+assignGlyph('pullup','M')
+assignGlyph('lunge-curl','H')
+assignGlyph('dips','J')
+assignGlyph('dumbell-rows','N')
+assignGlyph('cable-curl','K')
+assignGlyph('rope-pulldown','L')
